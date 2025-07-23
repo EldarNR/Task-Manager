@@ -1,0 +1,13 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.pageInfo {
+  font-size: $font-size-normal;
+  color: #5C7080;
+}

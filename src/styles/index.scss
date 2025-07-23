@@ -1,0 +1,23 @@
+// settings
+@import "settings/colors";
+@import "@styles/settings/fonts";
+@import "settings/variables";
+
+// generic
+@import "generic/base";
+@import "generic/reset";
+
+// tools
+@import "tools/_mixins";
+
+// components
+@import "components/header";
+@import "components/taskBoard";
+@import "components/pagination";
+@import "components/projectsPage";
+@import "components/notFoundPage";
+@import "components/profilePage";
+@import "components/modal";
+@import "components/form";
+@import "components/loginPage";
+@import "components/projectPage";

@@ -1,0 +1,16 @@
+.dialog {
+  max-width: 90vw;
+  min-width: 600px;
+  border-radius: 8px;
+
+  &--body {
+    padding: 1.5rem;
+  }
+}
+
+.footer {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}

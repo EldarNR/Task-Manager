@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Проект Alpha",
+      "description": "Описание проекта Alpha",
+      "createdAt": "2024-01-01T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Проект Beta",
+      "description": "Описание проекта Beta",
+      "createdAt": "2024-02-01T12:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Проект Gamma",
+      "description": "Описание проекта Gamma",
+      "createdAt": "2024-03-01T12:00:00Z"
+    }
+  ],
+  "tasks": [],
+  "users": [
+    {
+      "id": 1,
+      "email": "user123@example.com",
+      "password": "12345test",
+      "avatar": {}
+    }
+  ],
+  "files": []
+}

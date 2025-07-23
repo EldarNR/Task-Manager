@@ -1,0 +1,19 @@
+@mixin transition($property: all, $duration: 0.2s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+@mixin button-hover($bg-color, $text-color: $c-white) {
+  @include transition();
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+    color: $text-color;
+  }
+}
+
+@mixin focus-ring($color: $primary-color) {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($color, 0.5);
+  }
+}

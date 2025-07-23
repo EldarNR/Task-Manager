@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--left-container {
+    display: flex;
+    align-items: center;
+    gap:10px;
+
+    input {
+      max-width: 300px;
+    }
+  }
+}

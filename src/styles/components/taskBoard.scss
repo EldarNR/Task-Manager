@@ -1,0 +1,618 @@
+.detail-task-page {
+  min-height: 100vh;
+  background-color: $detail-task-color-background-secondary;
+
+  &--header {
+    background-color: $detail-task-color-background;
+    border-bottom: 1px solid $detail-task-color-border;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px $detail-task-shadow;
+  }
+
+  &--header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &--header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &--back-button {
+    background: none;
+    border: none;
+    color: $primary-color;
+    cursor: pointer;
+    font-size: $font-size-normal;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $detail-task-color-background-secondary;
+    }
+  }
+
+  &--title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $detail-task-color-text;
+    margin: 0;
+  }
+
+  &--status-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  &--status-text {
+    color: $detail-task-color-text-muted;
+    font-size: $font-size-normal;
+  }
+
+  &--actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &--content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    &--header-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .detail-task-page--actions {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .detail-task-page--content {
+      padding: 0 16px;
+    }
+
+    .file-display--item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .file-display--actions {
+      align-self: stretch;
+      justify-content: flex-end;
+    }
+
+    .modal-form--actions {
+      flex-direction: column;
+    }
+  }
+
+}
+
+.task-details-card {
+  background-color: $detail-task-color-background;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px $detail-task-shadow;
+  border: 1px solid $detail-task-color-border-light;
+
+  &--title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $detail-task-color-text;
+    margin-bottom: 16px;
+  }
+
+  &--field {
+    margin-bottom: 16px;
+  }
+
+  &--field:last-child {
+    margin-bottom: 0;
+  }
+
+  &--label {
+    font-weight: 500;
+    color: $detail-task-color-text;
+    margin-bottom: 4px;
+  }
+
+  &--value {
+    color: $detail-task-color-text-muted;
+    line-height: 1.4;
+  }
+}
+
+.files-section {
+  background-color: $detail-task-color-border-light;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px $detail-task-shadow;
+  border: 1px solid $detail-task-color-border;
+
+  &--title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $detail-task-color-text;
+    margin-bottom: 16px;
+  }
+
+  &--upload-form {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid $detail-task-color-border-light;
+  }
+}
+
+.file-display {
+  margin-bottom: 16px;
+
+  &--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &--title {
+    font-weight: 500;
+    color: $detail-task-color-text;
+  }
+
+  &--list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &--item {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid $detail-task-color-border;
+    border-radius: 8px;
+    background-color: $detail-task-color-background-secondary;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $detail-task-color-border-light;
+    }
+  }
+
+  &--item-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 16px;
+  }
+
+  &--item-details {
+    flex: 1;
+  }
+
+  &--item-name {
+    font-weight: 500;
+    color: $detail-task-color-text;
+    margin-bottom: 4px;
+    word-break: break-word;
+  }
+
+  &--item-size {
+    font-size: $font-size-small;
+    color: $detail-task-color-text-muted;
+  }
+
+  &--actions {
+    display: flex;
+    gap: 4px;
+  }
+
+  &--empty {
+    text-align: center;
+    padding: 24px;
+    color: $detail-task-color-text-muted;
+    font-style: italic;
+  }
+}
+
+.comments-section {
+  background-color: $detail-task-color-border-light;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px $detail-task-shadow;
+  border: 1px solid $detail-task-color-border-light;
+
+  &--title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $detail-task-color-text;
+    margin-bottom: 16px;
+  }
+
+  &--form {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $detail-task-color-border-light;
+  }
+
+  &--list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &--empty {
+    text-align: center;
+    padding: 24px;
+    color: $detail-task-color-text-muted;
+    font-style: italic;
+  }
+}
+
+.comment-item {
+  border: 1px solid $detail-task-color-border;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: $detail-task-color-background-secondary;
+
+  &--header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &--avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+  }
+
+  &--author {
+    font-weight: 500;
+    color: $detail-task-color-text;
+  }
+
+  &--text {
+    margin-left: 42px;
+    color: $detail-task-color-text-muted;
+    line-height: 1.4;
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &--actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    justify-content: flex-end;
+  }
+}
+
+.error-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  color: $danger-color;
+}
+
+.kanban-board {
+  padding: 1.5rem;
+  background-color: $gray-100;
+}
+
+.kanban-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $gray-800;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.kanban-columns {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray-200;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray-400;
+    border-radius: 4px;
+
+    &:hover {
+      background: $gray-500;
+    }
+  }
+}
+
+.column {
+  flex-shrink: 0;
+  width: 20rem;
+  border-radius: 0.5rem;
+  border: 2px solid;
+  @include transition();
+
+  &--todo {
+    background-color: $todo-bg;
+    border-color: $todo-border;
+  }
+
+  &--progress {
+    background-color: $progress-bg;
+    border-color: $progress-border;
+  }
+
+  &--done {
+    background-color: $done-bg;
+    border-color: $done-border;
+  }
+
+  &--drag-over {
+    border-color: $primary-color;
+    background-color: #dbeafe;
+    transform: scale(1.02);
+  }
+}
+
+.column-header {
+  padding: 1rem;
+  border-bottom: 1px solid $gray-200;
+}
+
+.column-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: $gray-800;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.column-count {
+  font-size: 0.875rem;
+  background-color: $gray-200;
+  color: $gray-600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  margin-left: auto;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.column-add-task {
+  padding: 1rem;
+  border-bottom: 1px solid $gray-200;
+}
+
+.add-task-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-task-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid $gray-300;
+  border-radius: 0.375rem;
+  @include focus-ring();
+  @include transition();
+
+  &::placeholder {
+    color: $gray-500;
+  }
+}
+
+.add-task-button {
+  padding: 0.5rem 0.75rem;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  @include button-hover($primary-color);
+  @include focus-ring();
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.column-tasks {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 25rem;
+}
+
+.column-empty {
+  text-align: center;
+  padding: 2rem;
+  color: $gray-500;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.task {
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid $gray-200;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  @include transition(all, 0.2s);
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+
+  &--dragged {
+    opacity: 0.5;
+    transform: rotate(2deg) scale(1.05);
+  }
+
+  &--editing {
+    box-shadow: 0 0 0 2px $primary-color;
+    cursor: default;
+  }
+}
+
+.task-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.task-handle {
+  margin-top: 0.25rem;
+  color: $gray-400;
+  @include transition();
+
+  &:hover {
+    color: $gray-600;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+}
+
+.task-body {
+  flex: 1;
+}
+
+.task-text {
+  font-size: 0.875rem;
+  color: $gray-800;
+  line-height: 1.6;
+  gap: 8px;
+  margin: 0;
+}
+
+.task-edit-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid $gray-300;
+  border-radius: 0.25rem;
+  resize: none;
+  font-family: inherit;
+  @include focus-ring();
+  @include transition();
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.task-action {
+  padding: 0.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  @include transition();
+
+  &--save {
+    color: $success-color;
+
+    &:hover {
+      color: white;
+      background-color: $success-color;
+    }
+  }
+
+  &--cancel {
+    color: $gray-600;
+
+    &:hover {
+      color: white;
+      background-color: $gray-600;
+    }
+  }
+
+  &--edit {
+    color: $primary-color;
+
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+    }
+  }
+
+  &--delete {
+    color: $danger-color;
+
+    &:hover {
+      color: white;
+      background-color: $danger-color;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .kanban-board {
+    padding: 1rem;
+  }
+
+  .kanban-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .kanban-columns {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .column {
+    width: 14rem;
+  }
+
+  .add-task-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .add-task-button {
+    align-self: stretch;
+  }
+}
